@@ -10,6 +10,7 @@
 ==/UserStyle== */
 
 /* Hide reference symbols */
+
 .fn,
 .jwac .fn,
 .v>.b {
@@ -31,6 +32,7 @@
 }
 
 /* Hide audio player */
+
 /*#playerwrapper {
   display: none;
 }*/
