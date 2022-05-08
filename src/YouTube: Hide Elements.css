@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name        YouTube: Hide Elements
+@version     1
+@encoding    utf-8
+@match       *://*.youtube.com/*
+@author      godly-devotion
+@compatible  safari
+==/UserStyle== */
+/* Hide Overlay Buttons */
+
+#hover-overlays {
+  display: none;
+}

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bypass Google Redirect Notice
-// @version      1.0
+// @version      2
 // @encoding     utf-8
 // @match        *://*.google.com/url?*
 // @author       godly-devotion
@@ -13,6 +13,7 @@
 // @updateURL    https://github.com/godly-devotion/userscripts/raw/main/src/Bypass%20Google%20Redirect%20Notice.user.js
 // @run-at       document-start
 // ==/UserScript==
+
 const url = new URL(window.location).searchParams.get("url");
 if (url) {
   window.location.replace(decodeURIComponent(url).replace("%20","+"));

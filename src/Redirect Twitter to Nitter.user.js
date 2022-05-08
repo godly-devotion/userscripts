@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      1.0
+// @version      2
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
 // @author       godly-devotion
@@ -13,6 +13,7 @@
 // @updateURL    https://github.com/godly-devotion/userscripts/raw/main/src/Redirect%20Twitter%20to%20Nitter.user.js
 // @run-at       document-start
 // ==/UserScript==
+
 const pathname = window.location.pathname;
 if (pathname) {
   window.location.replace("https://nitter.domain.glass" + pathname);

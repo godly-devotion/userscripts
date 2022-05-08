@@ -1,0 +1,34 @@
+/* ==UserStyle==
+@name        WOL: Hide Elements
+@version     1
+@encoding    utf-8
+@match       *://wol.jw.org/*
+@author      godly-devotion
+@compatible  safari
+==/UserStyle== */
+
+/* Hide reference symbols */
+.fn,
+.jwac .fn,
+.v>.b {
+  display: none !important;
+}
+
+/* Hide secondary nav */
+
+#secondaryNavContent {
+  display: none !important;
+}
+
+.articlePositioner {
+  margin: 0 !important;
+}
+
+.article {
+  max-width: unset !important;
+}
+
+/* Hide audio player */
+/*#playerwrapper {
+  display: none;
+}*/
