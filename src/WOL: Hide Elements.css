@@ -33,6 +33,6 @@
 
 /* Hide audio player */
 
-/*#playerwrapper {
+#playerwrapper {
   display: none;
-}*/
+}
