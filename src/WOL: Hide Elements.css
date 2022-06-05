@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        WOL: Hide Elements
-@version     2
+@version     3
 @encoding    utf-8
 @match       *://wol.jw.org/*
 @author      godly-devotion
@@ -34,5 +34,5 @@
 /* Hide audio player */
 
 #playerwrapper {
-  display: none;
+  display: none !important;
 }
