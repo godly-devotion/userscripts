@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      3
+// @version      4
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
 // @author       godly-devotion
@@ -16,5 +16,5 @@
 
 const pathname = window.location.pathname;
 if (pathname) {
-  window.location.replace("https://nitter.net" + pathname);
+  window.location.replace("https://nitter.nl" + pathname);
 }
