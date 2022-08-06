@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bypass Google Redirect Notice
-// @version      2
+// @version      3
 // @encoding     utf-8
 // @match        *://*.google.com/url?*
 // @author       godly-devotion
@@ -14,7 +14,7 @@
 // @run-at       document-start
 // ==/UserScript==
 
-const url = new URL(window.location).searchParams.get("url");
+const url = new URL(window.location).searchParams.get("q");
 if (url) {
   window.location.replace(decodeURIComponent(url).replace("%20","+"));
 }
