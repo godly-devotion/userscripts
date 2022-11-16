@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      6
+// @version      7
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
 // @match        *://nitter.nl/*
@@ -24,14 +24,13 @@ if (window.location.hostname === "twitter.com") {
 }
 
 if (window.location.hostname === "nitter.nl") {
-  if (localStorage.getItem("reloadForCookies")) {
+  if (document.cookie) {
     return;
   }
-  document.cookie = "hlsPlayback=on; Secure";
-  document.cookie = "infiniteScroll=on; Secure";
-  document.cookie = "replaceReddit=libreddit.nl; Secure";
-  document.cookie = "replaceTwitter=nitter.nl; Secure";
-  document.cookie = "replaceYouTube=; Secure";
-  localStorage.setItem("reloadForCookies", "true");
+  document.cookie = "hlsPlayback=on; path=/";
+  document.cookie = "infiniteScroll=on; path=/";
+  document.cookie = "replaceReddit=libreddit.nl; path=/";
+  document.cookie = "replaceTwitter=nitter.nl; path=/";
+  document.cookie = "replaceYouTube=; path=/";
   window.location.reload();
 }
