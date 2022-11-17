@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      7
+// @version      8
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
 // @match        *://nitter.nl/*
@@ -15,7 +15,10 @@
 // @run-at       document-start
 // ==/UserScript==
 
-if (window.location.hostname === "twitter.com") {
+if (
+  window.location.hostname === "twitter.com" ||
+  window.location.hostname === "mobile.twitter.com"
+) {
   const pathname = window.location.pathname;
   if (pathname) {
     window.location.replace("https://nitter.nl" + pathname);
