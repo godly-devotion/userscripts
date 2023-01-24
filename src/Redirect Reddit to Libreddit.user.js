@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Redirect Reddit to Libreddit
-// @version      4
+// @version      5
 // @encoding     utf-8
 // @match        *://*.reddit.com/*
-// @match        *://libreddit.nl/*
+// @match        *://bob.fr.to/*
 // @author       godly-devotion
 // @compatible   chrome
 // @compatible   firefox
@@ -18,12 +18,12 @@
 if (window.location.hostname === "www.reddit.com") {
   const pathname = window.location.pathname;
   if (pathname) {
-    window.location.replace("https://libreddit.nl" + pathname);
+    window.location.replace("https://bob.fr.to" + pathname);
   }
   return;
 }
 
-if (window.location.hostname === "libreddit.nl") {
+if (window.location.hostname === "bob.fr.to") {
   if (document.cookie) {
     return;
   }
