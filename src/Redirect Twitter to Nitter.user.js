@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      8
+// @version      9
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
 // @match        *://nitter.mask.sh/*
