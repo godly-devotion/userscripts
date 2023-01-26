@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      9
+// @version      10
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
-// @match        *://nitter.mask.sh/*
+// @match        *://nitter.privacytools.io/*
 // @author       godly-devotion
 // @compatible   chrome
 // @compatible   firefox
@@ -21,19 +21,19 @@ if (
 ) {
   const pathname = window.location.pathname;
   if (pathname) {
-    window.location.replace("https://nitter.mask.sh" + pathname);
+    window.location.replace("https://nitter.privacytools.io" + pathname);
   }
   return;
 }
 
-if (window.location.hostname === "nitter.mask.sh") {
+if (window.location.hostname === "nitter.privacytools.io") {
   if (document.cookie) {
     return;
   }
   document.cookie = "hlsPlayback=on; path=/";
   document.cookie = "infiniteScroll=on; path=/";
   document.cookie = "replaceReddit=libreddit.nl; path=/";
-  document.cookie = "replaceTwitter=nitter.mask.sh; path=/";
+  document.cookie = "replaceTwitter=nitter.privacytools.io; path=/";
   document.cookie = "replaceYouTube=; path=/";
   window.location.reload();
 }
