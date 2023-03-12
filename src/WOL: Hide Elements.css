@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        WOL: Hide Elements
-@version     3
+@version     4
 @encoding    utf-8
 @match       *://wol.jw.org/*
 @author      godly-devotion
@@ -24,15 +24,9 @@
 }
 
 .articlePositioner {
-  margin: 0 !important;
+  margin: auto !important;
 }
 
 .article {
-  max-width: unset !important;
-}
-
-/* Hide audio player */
-
-#playerwrapper {
-  display: none !important;
+  margin: auto !important;
 }
