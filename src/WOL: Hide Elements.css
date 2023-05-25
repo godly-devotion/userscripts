@@ -17,6 +17,20 @@
   display: none !important;
 }
 
+/* Hide welcome container items */
+
+.welcomeContainer .siteGreeting {
+  display: none;
+}
+
+.welcomeContainer .siteAbout {
+  display: none;
+}
+
+.welcomeContainer .siteParentLink {
+  display: none;
+}
+
 /* Hide secondary nav */
 
 #secondaryNavContent {
@@ -29,4 +43,14 @@
 
 .article {
   margin: auto !important;
+}
+
+/* Hide toolbar items */
+
+#menuToolsShare {
+  display: none;
+}
+
+#contentFooterLegal {
+  display: none;
 }
