@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        YouTube: Hide Elements
-@version     1
+@version     2
 @encoding    utf-8
 @match       *://*.youtube.com/*
 @author      godly-devotion
@@ -8,6 +8,62 @@
 @downloadURL https://github.com/godly-devotion/userscripts/raw/main/src/YouTube%3A%20Hide%20Elements.css
 @updateURL   https://github.com/godly-devotion/userscripts/raw/main/src/YouTube%3A%20Hide%20Elements.css
 ==/UserStyle== */
+
+/* Header items */
+
+ytd-masthead #voice-search-button,
+ytd-masthead #buttons ytd-topbar-menu-button-renderer:first-child,
+ytd-notification-topbar-button-renderer,
+ytd-icon-badge-topbar-button-renderer {
+  display: none !important;
+}
+
+/* Video browse section */
+
+ytd-two-column-browse-results-renderer #header {
+  display: none !important;
+}
+
+/* Sidebar section */
+
+tp-yt-app-drawer ytd-guide-renderer #sections ytd-guide-section-renderer:nth-child(2) {
+  border: none !important;
+}
+
+tp-yt-app-drawer ytd-guide-renderer #sections ytd-guide-section-renderer:nth-child(3),
+tp-yt-app-drawer ytd-guide-renderer #sections ytd-guide-section-renderer:nth-child(4),
+tp-yt-app-drawer ytd-guide-renderer #sections ytd-guide-section-renderer:nth-child(5),
+tp-yt-app-drawer ytd-guide-renderer #footer {
+  display: none !important;
+}
+
+/* Video actions buttons */
+
+ytd-watch-metadata .top-level-buttons ytd-button-renderer,
+ytd-watch-metadata ytd-download-button-renderer,
+ytd-watch-metadata yt-button-shape [aria-label="Clip"],
+ytd-watch-metadata #menu .ytd-watch-metadata yt-button-shape:last-child {
+  display: none !important;
+}
+
+/* Video actions buttons section divider */
+
+ytd-watch-metadata #above-the-fold #top-row {
+  border: none !important;
+}
+
+/* Comments section */
+
+ytd-comments ytd-item-section-renderer.ytd-comments #header,
+ytd-comments ytd-item-section-renderer.ytd-comments #spinner-container {
+  display: none !important;
+}
+
+/* Related items section */
+
+ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
+  display: none ! important;
+}
 
 /* Hide Overlay Buttons */
 
