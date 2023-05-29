@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        YouTube: Hide Elements
-@version     2
+@version     3
 @encoding    utf-8
 @match       *://*.youtube.com/*
 @author      godly-devotion
@@ -18,12 +18,6 @@ ytd-icon-badge-topbar-button-renderer {
   display: none !important;
 }
 
-/* Video browse section */
-
-ytd-two-column-browse-results-renderer #header {
-  display: none !important;
-}
-
 /* Sidebar section */
 
 tp-yt-app-drawer ytd-guide-renderer #sections ytd-guide-section-renderer:nth-child(2) {
@@ -37,11 +31,20 @@ tp-yt-app-drawer ytd-guide-renderer #footer {
   display: none !important;
 }
 
+/* Video player */
+
+ytd-player button[data-tooltip-target-id="ytp-autonav-toggle-button"],
+ytd-player .ytp-miniplayer-button,
+ytd-player .ytp-pip-button,
+ytd-player .ytp-size-button {
+  display: none !important;
+}
+
 /* Video actions buttons */
 
 ytd-watch-metadata .top-level-buttons ytd-button-renderer,
 ytd-watch-metadata ytd-download-button-renderer,
-ytd-watch-metadata yt-button-shape [aria-label="Clip"],
+ytd-watch-metadata yt-button-shape button[aria-label="Clip"],
 ytd-watch-metadata #menu .ytd-watch-metadata yt-button-shape:last-child {
   display: none !important;
 }
@@ -54,8 +57,9 @@ ytd-watch-metadata #above-the-fold #top-row {
 
 /* Comments section */
 
-ytd-comments ytd-item-section-renderer.ytd-comments #header,
-ytd-comments ytd-item-section-renderer.ytd-comments #spinner-container {
+ytd-comments ytd-item-section-renderer.ytd-comments>#header,
+ytd-comments ytd-item-section-renderer.ytd-comments>#spinner-container,
+ytd-comments ytd-comment-action-buttons-renderer #reply-button-end {
   display: none !important;
 }
 
@@ -63,10 +67,4 @@ ytd-comments ytd-item-section-renderer.ytd-comments #spinner-container {
 
 ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
   display: none ! important;
-}
-
-/* Hide Overlay Buttons */
-
-#hover-overlays {
-  display: none;
 }
