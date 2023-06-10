@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        YouTube: Hide Elements
-@version     3
+@version     4
 @encoding    utf-8
 @match       *://*.youtube.com/*
 @author      godly-devotion
@@ -10,6 +10,14 @@
 ==/UserStyle== */
 
 /* Header items */
+
+ytd-masthead ytd-logo svg.external-icon>svg>g:first-child>path:first-child {
+  fill: rgba(255, 255, 255, 0.2) !important;
+}
+
+ytd-masthead ytd-logo svg.external-icon>svg>g:last-child {
+  display: none !important;
+}
 
 ytd-masthead #voice-search-button,
 ytd-masthead #buttons ytd-topbar-menu-button-renderer:first-child,
@@ -45,6 +53,7 @@ ytd-player .ytp-size-button {
 ytd-watch-metadata .top-level-buttons ytd-button-renderer,
 ytd-watch-metadata ytd-download-button-renderer,
 ytd-watch-metadata yt-button-shape button[aria-label="Clip"],
+ytd-watch-metadata yt-button-shape button[aria-label="Thanks"],
 ytd-watch-metadata #menu .ytd-watch-metadata yt-button-shape:last-child {
   display: none !important;
 }
@@ -67,4 +76,11 @@ ytd-comments ytd-comment-action-buttons-renderer #reply-button-end {
 
 ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer {
   display: none ! important;
+}
+
+/* Video context menu */
+
+ytd-popup-container ytd-menu-service-item-download-renderer,
+ytd-popup-container tp-yt-paper-listbox>ytd-menu-service-item-renderer:last-child {
+  display: none !important;
 }
