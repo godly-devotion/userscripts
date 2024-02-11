@@ -3,7 +3,7 @@
 // @version      11
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
-// @match        *://nitter.privacytools.io/*
+// @match        *://nitter.freedit.eu/*
 // @author       godly-devotion
 // @compatible   chrome
 // @compatible   firefox
