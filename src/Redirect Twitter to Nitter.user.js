@@ -21,19 +21,19 @@ if (
 ) {
   const pathname = window.location.pathname;
   if (pathname) {
-    window.location.replace("https://nitter.privacytools.io" + pathname);
+    window.location.replace("https://nitter.freedit.eu" + pathname);
   }
   return;
 }
 
-if (window.location.hostname === "nitter.privacytools.io") {
+if (window.location.hostname === "nitter.freedit.eu") {
   if (document.cookie) {
     return;
   }
   document.cookie = "hlsPlayback=on; path=/";
   document.cookie = "infiniteScroll=on; path=/";
-  document.cookie = "replaceReddit=libreddit.nl; path=/";
-  document.cookie = "replaceTwitter=nitter.privacytools.io; path=/";
+  document.cookie = "replaceReddit=libreddit.freedit.eu; path=/";
+  document.cookie = "replaceTwitter=nitter.freedit.eu; path=/";
   document.cookie = "replaceYouTube=; path=/";
   window.location.reload();
 }
