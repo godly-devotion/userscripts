@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Twitter to Nitter
-// @version      10
+// @version      11
 // @encoding     utf-8
 // @match        *://*.twitter.com/*
 // @match        *://nitter.privacytools.io/*
