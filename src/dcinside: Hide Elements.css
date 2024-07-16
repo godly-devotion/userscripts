@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name        dcinside: Hide Elements
+@version     1
+@encoding    utf-8
+@match       *://m.dcinside.com/*
+@author      godly-devotion
+@compatible  safari
+@downloadURL https://github.com/godly-devotion/userscripts/raw/main/src/dcinside%3A%20Hide%20Elements.css
+@updateURL   https://github.com/godly-devotion/userscripts/raw/main/src/dcinside%3A%20Hide%20Elements.css
+==/UserStyle== */
+
+/* Hide bottom mobile banner */
+
+.adv-group {
+  display: none;
+}
+
+/* Hide post items */
+
+.nft-area,
+.reco-icon-box,
+#view_btn_area,
+#comment_box,
+.comment-write-btm {
+  display: none !important;
+}
+
+/* Hide ads */
+
+.grid.clkhigh {
+  display: none;
+}
