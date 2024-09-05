@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect Reddit to Libreddit
-// @version      6
+// @version      7
 // @encoding     utf-8
 // @match        *://*.reddit.com/*
 // @match        *://libreddit.freedit.eu/*
@@ -15,26 +15,30 @@
 // @run-at       document-start
 // ==/UserScript==
 
-if (window.location.hostname === "www.reddit.com") {
-  const pathname = window.location.pathname;
-  if (pathname) {
-    window.location.replace("https://libreddit.freedit.eu" + pathname);
-  }
-  return;
-}
-
-if (window.location.hostname === "libreddit.freedit.eu") {
-  if (document.cookie) {
+function main() {
+  if (window.location.hostname === "www.reddit.com") {
+    const pathname = window.location.pathname;
+    if (pathname) {
+      window.location.replace("https://libreddit.freedit.eu" + pathname);
+    }
     return;
   }
-  document.cookie = "theme=system; path=/";
-  document.cookie = "front_page=default; path=/";
-  document.cookie = "layout=card; path=/";
-  document.cookie = "wide=off; path=/";
-  document.cookie = "post_sort=hot; path=/";
-  document.cookie = "comment_sort=top; path=/";
-  document.cookie = "show_nsfw=off; path=/";
-  document.cookie = "use_hls=on; path=/";
-  document.cookie = "hide_hls_notification=on; path=/";
-  window.location.reload();
+
+  if (window.location.hostname === "libreddit.freedit.eu") {
+    if (document.cookie) {
+      return;
+    }
+    document.cookie = "theme=system; path=/";
+    document.cookie = "front_page=default; path=/";
+    document.cookie = "layout=card; path=/";
+    document.cookie = "wide=off; path=/";
+    document.cookie = "post_sort=hot; path=/";
+    document.cookie = "comment_sort=top; path=/";
+    document.cookie = "show_nsfw=off; path=/";
+    document.cookie = "use_hls=on; path=/";
+    document.cookie = "hide_hls_notification=on; path=/";
+    window.location.reload();
+  }
 }
+
+main();
