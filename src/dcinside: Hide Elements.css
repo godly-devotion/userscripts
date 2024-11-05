@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        dcinside: Hide Elements
-@version     2
+@version     3
 @encoding    utf-8
 @match       *://m.dcinside.com/*
 @author      godly-devotion
@@ -17,6 +17,7 @@
 
 /* Hide post items */
 
+#img_num_tipbox,
 .nft-area,
 .reco-icon-box,
 #view_btn_area,
@@ -26,6 +27,9 @@
 
 /* Hide ads */
 
-.grid.clkhigh {
+.adv-groupin,
+.trend-rank,
+.adv-grouptop,
+.grid.clkhigh{
   display: none;
 }
