@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        WOL: Hide Elements
-@version     5
+@version     6
 @encoding    utf-8
 @match       *://wol.jw.org/*
 @author      godly-devotion
@@ -8,6 +8,12 @@
 @downloadURL https://github.com/godly-devotion/userscripts/raw/main/src/WOL%3A%20Hide%20Elements.css
 @updateURL   https://github.com/godly-devotion/userscripts/raw/main/src/WOL%3A%20Hide%20Elements.css
 ==/UserStyle== */
+
+/* Hide audio player */
+
+#playerwrapper {
+  display: none !important;
+}
 
 /* Hide reference symbols */
 
