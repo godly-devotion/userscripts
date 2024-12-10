@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        dcinside: Hide Elements
-@version     3
+@version     4
 @encoding    utf-8
 @match       *://m.dcinside.com/*
 @author      godly-devotion
@@ -21,6 +21,7 @@
 .nft-area,
 .reco-icon-box,
 #view_btn_area,
+.all-comment,
 .comment-write-btm {
   display: none !important;
 }
