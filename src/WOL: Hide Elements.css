@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name        WOL: Hide Elements
-@version     6
+@version     7
 @encoding    utf-8
 @match       *://wol.jw.org/*
 @author      godly-devotion
@@ -20,6 +20,12 @@
 .fn,
 .jwac .fn,
 .v>.b {
+  display: none !important;
+}
+
+/* Hide comment field */
+
+.bodyTxt .gen-field {
   display: none !important;
 }
 
