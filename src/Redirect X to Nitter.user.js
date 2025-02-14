@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Redirect X to Nitter
-// @version      2
+// @version      3
 // @encoding     utf-8
 // @match        *://x.com
 // @match        *://*.x.com/*
-// @match        *://nitter.poast.org/*
+// @match        *://xcancel.com/*
 // @author       godly-devotion
 // @compatible   chrome
 // @compatible   firefox
@@ -17,23 +17,22 @@
 // ==/UserScript==
 
 function main() {
+  const domain = "xcancel.com";
+
   if (window.location.hostname === "x.com") {
     const pathname = window.location.pathname;
     if (pathname) {
-      window.location.replace("https://nitter.poast.org" + pathname);
+      window.location.replace(`https://${domain}${pathname}`);
     }
     return;
   }
 
-  if (window.location.hostname === "nitter.poast.org") {
-    if (document.cookie.split("; ").length > 1) {
+  if (window.location.hostname === domain) {
+    if (document.cookie.split("; ").findIndex((row) => row.startsWith("replaceReddit=")) != -1) {
       return;
     }
-    document.cookie = "hlsPlayback=on; path=/; Secure";
     document.cookie = "infiniteScroll=on; path=/; Secure";
     document.cookie = "replaceReddit=libreddit.freedit.eu; path=/; Secure";
-    document.cookie = "replaceTwitter=nitter.poast.org; path=/; Secure";
-    document.cookie = "replaceYouTube=; path=/; Secure";
     window.location.reload();
   }
 }
