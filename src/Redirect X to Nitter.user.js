@@ -31,7 +31,6 @@ function main() {
     if (document.cookie.split("; ").findIndex((row) => row.startsWith("replaceReddit=")) != -1) {
       return;
     }
-    document.cookie = "infiniteScroll=on; path=/; Secure";
     document.cookie = "replaceReddit=libreddit.freedit.eu; path=/; Secure";
     window.location.reload();
   }
